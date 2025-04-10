@@ -1,3 +1,4 @@
+import WhatsappLive from "@components/WhatsappLive";
 import "./globals.css";
 
 import { Footer, NavBar } from "@components";
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NavBar />
         {children}
         <Footer />
+        <WhatsappLive/>
       </body>
     </html>
   );

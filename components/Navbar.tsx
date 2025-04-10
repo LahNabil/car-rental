@@ -1,26 +1,51 @@
-import Link from "next/link";
-import Image from "next/image";
+'use client';
 
-import CustomButton from "./CustomButton";
+import Link from 'next/link';
+import Image from 'next/image';
+import { Sci } from './Sci';
 
 const NavBar = () => (
-  <header className='w-full  absolute z-10'>
-    <nav className='max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-transparent'>
-      <Link href='/' className='flex justify-center items-center'>
+  <header className='w-full absolute z-10 bg-transparent'>
+    <nav className='max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4'>
+      
+      {/* Logo */}
+      <Link href='/' className='flex items-center'>
         <Image
           src='/logo.svg'
           alt='logo'
-          width={118}
-          height={18}
+          width={120}
+          height={25}
           className='object-contain'
         />
       </Link>
 
-      <CustomButton
-        title='Sign in'
-        btnType='button'
-        containerStyles='text-primary-blue rounded-full bg-white min-w-[130px]'
-      />
+      <div>
+      <ul className='flex gap-8 items-center text-sm sm:text-base font-medium'>
+        <li>
+          <Link href='/' className='hover:text-blue-600 transition'>
+            Cars
+          </Link>
+        </li>
+        <li>
+          <Link href='/reservation' className='hover:text-blue-600 transition'>
+            Reservation
+          </Link>
+        </li>
+        <li>
+          <Link href='/about' className='hover:text-blue-600 transition'>
+            About Us
+          </Link>
+        </li>
+        <li>
+          <Link href='/contact' className='hover:text-blue-600 transition'>
+            Contact
+          </Link>
+        </li>
+      </ul>
+      </div>
+      <div>
+        <Sci/>
+      </div>
     </nav>
   </header>
 );

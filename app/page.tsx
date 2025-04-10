@@ -2,6 +2,7 @@ import { cars as allCars } from "@data/data";
 import { HomeProps } from "@types";
 import { fuels, yearsOfProduction } from "@constants";
 import { CarCard, ShowMore, SearchBar, CustomFilter, Hero } from "@components";
+import CarSlider from '@/components/CarSlider';
 
 export default async function Home({ searchParams }: HomeProps) {
  // Simulate filtering
@@ -37,7 +38,7 @@ export default async function Home({ searchParams }: HomeProps) {
           <p>Explore out cars you might like</p>
         </div>
 
-        <div className='home__filters'>
+        <div className='home__filters mb-4'>
           <SearchBar />
 
           <div className='home__filter-container'>
@@ -48,21 +49,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
         {!isDataEmpty ? (
           <section>
-            <div className='home__cars-wrapper'>
-              {filteredCars.slice(0, searchParams.limit || 10).map((car, index) => (
-                <CarCard key={index} car={car} />
-              ))}
-            </div>
-            {/* <div className='home__cars-wrapper'>
-              {allCars?.map((car) => (
-                <CarCard car={car} />
-              ))}
-            </div> */}
-
-            <ShowMore
-              pageNumber={(searchParams.limit || 10) / 10}
-              isNext={(searchParams.limit || 10) > allCars.length}
-            />
+            <CarSlider cars={filteredCars.slice(0, 10)} />
           </section>
         ) : (
           <div className='home__error-container'>

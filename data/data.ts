@@ -1,3 +1,23 @@
+export const scis = [
+  {
+      id:1,
+      icon: 'bi-facebook',
+      link: 'https://web.facebook.com/profile.php?id=61566508671453',
+      alte: 'logo_facebook'
+  },
+  {
+      id:2,
+      icon: 'bi-pinterest',
+      link: 'https://www.pinterest.com/cookiteasy_/',
+      alte: 'logo_pinterest'
+  },
+  {
+      id:3,
+      icon: 'bi-tiktok',
+      link: 'https://tiktok.com',
+      alte: 'logo_tiktok'
+  },
+]
 export const cars = [
     {
       city_mpg: 29,
