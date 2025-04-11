@@ -22,7 +22,7 @@ const NavBar = () => (
       <div>
       <ul className='flex gap-8 items-center text-sm sm:text-base font-medium'>
         <li>
-          <Link href='/' className='hover:text-blue-600 transition'>
+          <Link href='/cars' className='hover:text-blue-600 transition'>
             Cars
           </Link>
         </li>
