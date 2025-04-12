@@ -2,7 +2,7 @@ export const scis = [
   {
       id:1,
       icon: 'bi-facebook',
-      link: 'https://web.facebook.com/profile.php?id=61566508671453',
+      link: 'https://web.facebook.com',
       alte: 'logo_facebook'
   },
   {

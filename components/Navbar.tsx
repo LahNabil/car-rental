@@ -21,14 +21,14 @@ const NavBar = () => (
 
       <div>
       <ul className='flex gap-8 items-center text-sm sm:text-base font-medium'>
-        <li>
-          <Link href='/cars' className='hover:text-blue-600 transition'>
-            Cars
+      <li>
+          <Link href='/' className='hover:text-blue-600 transition'>
+            Home
           </Link>
         </li>
         <li>
-          <Link href='/reservation' className='hover:text-blue-600 transition'>
-            Reservation
+          <Link href='/cars' className='hover:text-blue-600 transition'>
+            Cars
           </Link>
         </li>
         <li>

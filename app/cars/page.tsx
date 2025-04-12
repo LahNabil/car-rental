@@ -4,34 +4,30 @@ import { useState } from "react";
 import { cars as allCars } from "@data/data";
 import { CarCard, SearchBar, CustomFilter } from "@components";
 import { fuels, yearsOfProduction } from "@constants";
+import { HomeProps } from "@types";
 
-export default function CarsPage() {
-  const [searchParams, setSearchParams] = useState({
-    manufacturer: "",
-    model: "",
-    year: "",
-    fuel: "",
-  });
-
+export default function CarsPage({ searchParams }: HomeProps)  {
   const filteredCars = allCars.filter((car) => {
     const matchManufacturer = searchParams.manufacturer
       ? car.make.toLowerCase().includes(searchParams.manufacturer.toLowerCase())
       : true;
-
-    const matchModel = searchParams.model
-      ? car.model.toLowerCase().includes(searchParams.model.toLowerCase())
-      : true;
-
-    const matchFuel = searchParams.fuel
-      ? car.fuel_type.toLowerCase() === searchParams.fuel.toLowerCase()
-      : true;
-
+  
     const matchYear = searchParams.year
       ? car.year === Number(searchParams.year)
       : true;
-
-    return matchManufacturer && matchModel && matchFuel && matchYear;
+  
+    const matchFuel = searchParams.fuel
+      ? car.fuel_type.toLowerCase() === searchParams.fuel.toLowerCase()
+      : true;
+  
+    const matchModel = searchParams.model
+      ? car.model.toLowerCase().includes(searchParams.model.toLowerCase())
+      : true;
+  
+    return matchManufacturer && matchYear && matchFuel && matchModel;
   });
+  
+    const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
     <main className="max-w-screen-xl mx-auto px-4 py-12">
