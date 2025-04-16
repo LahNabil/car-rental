@@ -1,5 +1,7 @@
 import WhatsappLive from "@components/WhatsappLive";
 import "./globals.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 import { Footer, NavBar } from "@components";
 
