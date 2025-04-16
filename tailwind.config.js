@@ -5,6 +5,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'bi-facebook',
+    'bi-instagram',
+    'bi-twitter',
+    'bi-linkedin',
+    'bi-github',
+    'bi-envelope',
+    'bi-telephone'
+    // add all the icons you use here!
+  ],
   mode: "jit",
   theme: {
     extend: {
