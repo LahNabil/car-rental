@@ -10,7 +10,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full absolute z-10 bg-transparent">
+    <header className="w-full absolute z-10 bg-transparent dark:bg-[rgba(77,116,255,1)]">
       <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4">
 
         {/* Logo */}
