@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Sci } from './Sci';
+import ThemeSwitch from './ThemeSwitch'; 
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,12 +46,13 @@ const NavBar = () => {
         {/* Social Icons */}
         <div className="hidden md:flex">
           <Sci />
+          <ThemeSwitch />
         </div>
       </nav>
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md rounded-b-lg px-6 py-4">
+        <div className="md:hidden bg-white shadow-md rounded-b-lg px-6 py-4 relative">
           <ul className="flex flex-col gap-4 text-base font-medium">
             <li><Link href="/" onClick={() => setIsOpen(false)} className="hover:text-blue-600 transition">Home</Link></li>
             <li><Link href="/cars" onClick={() => setIsOpen(false)} className="hover:text-blue-600 transition">Cars</Link></li>
@@ -60,6 +62,11 @@ const NavBar = () => {
 
           <div className="mt-4">
             <Sci />
+          </div>
+
+          {/* Place Theme Switch Button at the top-right corner */}
+          <div className="absolute top-4 right-4">
+            <ThemeSwitch />
           </div>
         </div>
       )}

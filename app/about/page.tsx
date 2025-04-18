@@ -4,7 +4,7 @@ import Image from 'next/image'
 const AboutPage = () => {
   return (
     <div>
-        <section className="bg-white text-gray-800 py-20">
+        <section className=" py-20">
   <div className="container mx-auto px-6 md:px-12 lg:px-20">
     {/* Header */}
     <div className="text-center mb-16">
@@ -32,7 +32,7 @@ const AboutPage = () => {
         <h2 className="text-3xl font-semibold mb-4">
           Driving Innovation & Trust
         </h2>
-        <p className="text-gray-700 mb-6 leading-relaxed">
+        <p className=" mb-6 leading-relaxed">
           Founded with a vision to simplify car buying and renting experiences, our platform bridges the gap between customers and top-quality vehicles. With a user-friendly interface, verified listings, and expert support, we’re redefining how people find and trust their dream cars.
         </p>
         <ul className="space-y-3 text-gray-700">

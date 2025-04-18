@@ -48,7 +48,7 @@
 }
 
 .hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
+  @apply text-[27px] font-light mt-5;
 }
 
 .hero__image-container {
@@ -67,7 +67,7 @@
 /* START: Home styles */
 
 .home__text-container {
-  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
+  @apply flex flex-col items-start justify-start gap-y-2.5;
 }
 
 .home__filters {
