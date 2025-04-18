@@ -52,7 +52,7 @@ const NavBar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md rounded-b-lg px-6 py-4 relative">
+        <div className="md:hidden shadow-md rounded-b-lg px-6 py-4 relative bg-white dark:bg-gray-900">
           <ul className="flex flex-col gap-4 text-base font-medium">
             <li><Link href="/" onClick={() => setIsOpen(false)} className="hover:text-blue-600 transition">Home</Link></li>
             <li><Link href="/cars" onClick={() => setIsOpen(false)} className="hover:text-blue-600 transition">Cars</Link></li>
