@@ -1,3 +1,4 @@
+import MapLoca from '@components/MapLoca';
 import React from 'react'
 
 const ContactPage = () => {
@@ -59,7 +60,14 @@ const ContactPage = () => {
                 </button>
               </form>
             </div>
+            
           </section>
+          <section className="mt-10">
+              <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+                <MapLoca />
+              </div>
+            </section>
+          
         </main>
       );
     

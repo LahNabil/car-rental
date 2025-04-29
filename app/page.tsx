@@ -5,6 +5,7 @@ import { CarCard, ShowMore, SearchBar, CustomFilter, Hero } from "@components";
 import CarSlider from '@/components/CarSlider';
 import ChooseUs from "@components/ChooseUs";
 import Link from "@node_modules/next/link";
+import MapLoca from "@components/MapLoca";
 
 export default async function Home({ searchParams }: HomeProps) {
  // Simulate filtering
@@ -88,6 +89,11 @@ export default async function Home({ searchParams }: HomeProps) {
       </Link>
     </div>
   </div>
+  <section className="mt-10">
+    <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl p-20">
+      <MapLoca />
+    </div>
+  </section>
 </section>
 
     </main>
